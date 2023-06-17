@@ -24,6 +24,15 @@ Serverless是一种高弹性、分布式、低成本的架构，很适合屌丝�
 此API需要在headers中传入Authorization:Bearer JWT参数，JWT密钥请在橙事英语小程序-我的页面复制。调用会消耗体验点数，规则与小程序会员规则一致。
 
 这边也感谢fxsjy、skywind3000大佬的搜集，我这边对原始数据进行了处理，优化后的词典数据库也一并进行了开源。
+![c110b8c483eb1a3a8db0ea4b3ed978da_](https://github.com/akirasen/citiesen/assets/41799341/24864c7b-c02e-4d97-a2f3-133ec89c2b1b)
+![0bca95ca5fd32e632d79748154a0056b_](https://github.com/akirasen/citiesen/assets/41799341/629f372a-6a9a-4f46-9e33-88d02db11c59)
+![3aba0d2f6ea2c3435f672f028b5efc69_](https://github.com/akirasen/citiesen/assets/41799341/3909bb33-073d-4f68-b15e-dbe96d04b4c7)
+![e69a82bbbab01ded5e1e8f58251ba114_](https://github.com/akirasen/citiesen/assets/41799341/b928f3c1-6561-4c4d-a717-fe7c233a923e)
+![e34e479123fd26ee945c3e2a51733348_](https://github.com/akirasen/citiesen/assets/41799341/78121d12-5ec7-4eef-b255-b8ff5575e28b)
+![bf71d017d6b3c02d2b0c4a0c4037b65c_](https://github.com/akirasen/citiesen/assets/41799341/a13ffaaa-5293-4fbf-a0a9-60fa020d4624)
+![aa2d617fbbde781fc2e5393d42327ed7_](https://github.com/akirasen/citiesen/assets/41799341/d029ecf5-9d4b-480b-9d7b-520e09cf9016)
+![ca7aabe543790422c116c05d1264ecb6_](https://github.com/akirasen/citiesen/assets/41799341/a32867cc-cf7f-4048-a009-500e3225a8c0)
+
 
 
 # 提前准备
