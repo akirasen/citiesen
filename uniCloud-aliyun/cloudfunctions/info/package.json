@@ -1,0 +1,13 @@
+{
+  "name": "appinfo",
+  "dependencies": {
+    "moment": "^2.29.4",
+    "uni-cloud-router": "file:../../../uni_modules/uni-cloud-router/uniCloud/cloudfunctions/common/uni-cloud-router",
+    "uni-id-common": "file:../../../uni_modules/uni-id-common/uniCloud/cloudfunctions/common/uni-id-common",
+    "uni-sec-check": "file:../../../uni_modules/uni-sec-check/uniCloud/cloudfunctions/common/uni-sec-check",
+    "uni-subscribemsg": "file:../../../uni_modules/uni-subscribemsg/uniCloud/cloudfunctions/common/uni-subscribemsg"
+  },
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

@@ -1,0 +1,55 @@
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"dict_word": {
+			"bsonType": "string",
+			"description": "关联单词id"
+		},
+		"user": {
+			"bsonType": "string",
+			"description": "用户"
+		},
+		"times": {
+			"bsonType": "int",
+			"description": "做对的次数"
+		},
+		"word": {
+			"bsonType": "string",
+			"description": "关联单词"
+		},
+		"show_in_list": {
+			"bsonType": "bool",
+			"description": "是否展示在列表中"
+		},
+		"score": {
+			"bsonType": "string",
+			"description": "得分"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间或做错的时间"
+		},
+		"initial_date": {
+			"bsonType": "timestamp",
+			"description": "真实创建时间"
+		},
+		"wronng_date": {
+			"bsonType": "timestamp",
+			"description": "最后一次做错时间"
+		},
+		"last_update_date": {
+			"bsonType": "timestamp",
+			"description": "最后一次修改时间"
+		}
+	}
+}

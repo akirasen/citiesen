@@ -1,0 +1,11 @@
+{
+  "name": "auth-token-db",
+  "main": "index.js",
+    "version": "1.0.0",
+    "cloudfunction-config": {
+        "concurrency": 1,
+        "memorySize": 256,
+        "timeout": 600,
+        "runtime":  "Nodejs12"
+    }
+}

@@ -1,0 +1,49 @@
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"translate_task": {
+			"bsonType": "string",
+			"description": "关联翻译id"
+		},
+		"user": {
+			"bsonType": "string",
+			"description": "用户"
+		},
+		"taskid": {
+			"bsonType": "string",
+			"description": "关联翻译id"
+		},
+		"show_in_list": {
+			"bsonType": "bool",
+			"description": "是否展示在列表中"
+		},
+		"score": {
+			"bsonType": "string",
+			"description": "得分"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		},
+		"last_update_date": {
+			"bsonType": "timestamp",
+			"description": "最后一次修改时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		}
+	}
+}
