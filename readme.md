@@ -1,8 +1,12 @@
 #介绍
+
 橙事英语-使用uniapp-uniCloud Serverless打造的英语学习微信小程序源码
+
 开源地址：https://github.com/akirasen/citiesen
 寻求帮助：微信公众号“造件师”或橙事英语小程序右下角提交客服消息
+
 设计思路：
+
 之前使用uniapp+koa2+graphql做了一个叫橙事粤语的微信小程序，我媳妇很喜欢，但那个小程序还是得用服务器来做后端。最近刚好在学习Serverless，于是就用Serverless为我媳妇重构了一下这个微信小程序，把学粤语改成了学英语。
 Serverless是一种高弹性、分布式、低成本的架构，很适合屌丝全栈开发者，用过都说香，强烈推荐。我这个项目开发时图方便，是直接用了Hbuilder X集成的uniCloud-aliyun服务（本质上是阿里云EMASserverless）。
 橙事英语的开发中，还做了一些橙事粤语没有的功能，比如考研英语刷题很实用的生词本。做阅读题遇到许多不认识的单词，直接拍照识别，并调用词典查询含义。将生词加入生词本，朗读生词读音。同时，还提供了生词练习功能，随机挑选生词本单词，在答案中选择中文含义帮助记忆。
@@ -15,17 +19,20 @@ Serverless是一种高弹性、分布式、低成本的架构，很适合屌丝�
 
 
 #提前准备
+
 1.uniapp-uniCloud云服务空间（阿里云）：Dcloud优化过的阿里云EMASserverless服务。获得云服务空间、地址，在小程序开发管理中绑定request合法域名:https://aip.baidubce.com;https//api.bspapp.com;https://api.next.bspapp.com;https://tcb-api.tencentcloudapi.com
 2.微信小程序，需要认证，准备好KEY，阿里云服务请求地址等进行绑定；
 3.微信商户号，与小程序绑定，申请V3证书；
 4.在百度大脑申请OCR通用识别，新建应用，获得KEY
 
 #相关文档
+
 https://uniapp.dcloud.net.cn/uniCloud
 https://ai.baidu.com/ai-doc/OCR/zk3h7xz52
 https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message.html
 
 #其他操作
+
 1.uniCloud-aliyun/database 目录下所有DB Schema需要上传到云端；
 2.在uniCloud网页端的dict-ec数据库，需要导入根目录的ecdictv2.csv数据库
 3.uniCloud-aliyun/info添加公共模块：uni-subscribemsg、uni-sec-check、uni-id-common、uni-cloud-router
@@ -37,7 +44,9 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscrib
 7.2 每日佳句通知：模板编号23947，字段包括：更新内容{{thing1.DATA}}、更新时间{{time2.DATA}}
 
 #配置
+
 ## /pages/index/index.vue
+
 第174行：XXXXXX为小程序订阅消息模板ID
 ```
  <view @tap="shares?shares=false:shares=true;giftcardShow=false;InvitationCount();subscribeMessage(['XXXXXXXXXXXXXXXXXXXXXX','XXXXXXXXXXXXXXXXXXXXXX'])" style="font-size: 22rpx;color:#FFA800;font-weight: 300;">
@@ -47,6 +56,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscrib
  translated: "Hello everyone, I am English assistant Jenny. You can press and hold the 'Speak' button below and speak to me in Chinese. I will help you translate it into English."
 ```
 ## /manifest.json
+
 第3行：uni-app应用标识
 ```
  "appid" : "__UNI__6DC00D1",
@@ -56,6 +66,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscrib
 "appid" : "wx9xxxxxxxxxx2e",
 ```
 ## uniCloud-aliyun/cloudfunctions/auth-token-db/index.js
+
 第3-5行：以下改为百度大脑OCR应用KEY
 ```
  const platform = 'citiesenbaidubce'
@@ -63,6 +74,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscrib
  const client_secret = 'XXXXXXXXXX'
 ```
 ## uniCloud-aliyun/cloudfunctions/common/uni-config-center/uni-id/config.json
+
 第9-10行：以下改为自定义加密用随机字符串
 ```
   "tokenSecret": "xxxxxxxxx", 
@@ -84,10 +96,12 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscrib
   },
 ```
 ## uniCloud-aliyun/cloudfunctions/common/uni-config-center/uni-open-bridge/config.json
+
 第3行：以下改为manifest.json中的uni-app应用标识
 ```
   "__UNI__xxxxxxxxx": {
 ```
+
 ## uniCloud-aliyun/cloudfunctions/common/uni-config-center/uni-pay/config.json
 
 第5-9行：notifyUrl是支付成功后的服务空间和回调地址，需要绑定空间后绑定域名，再来填写。notifyKey自行填写随机字符串。
@@ -113,8 +127,11 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscrib
 },
 ```
 ## uniCloud-aliyun/cloudfunctions/uni-pay-co/notify/appleiap.js
+
 这里写了充值后执行的逻辑，一般无需修改。里面会引用前端共用的售价配置文件，在：
+
 ## uniCloud-aliyun/cloudfunctions/http/service/http.js
+
 第53行起：
 hundred是百句系列，可以预设一些英语常用句子，前端点右下角的问号会自动随机输入。
 membership是售价设置，可自行修改。单位是分。
