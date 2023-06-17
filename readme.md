@@ -1,4 +1,4 @@
-#介绍
+# 介绍
 
 橙事英语-使用uniapp-uniCloud Serverless打造的英语学习微信小程序源码
 
@@ -18,20 +18,20 @@ Serverless是一种高弹性、分布式、低成本的架构，很适合屌丝�
 这边也感谢fxsjy、skywind3000大佬的搜集，我这边对原始数据进行了处理，优化后的词典数据库也一并进行了开源。
 
 
-#提前准备
+# 提前准备
 
 1.uniapp-uniCloud云服务空间（阿里云）：Dcloud优化过的阿里云EMASserverless服务。获得云服务空间、地址，在小程序开发管理中绑定request合法域名:https://aip.baidubce.com;https//api.bspapp.com;https://api.next.bspapp.com;https://tcb-api.tencentcloudapi.com
 2.微信小程序，需要认证，准备好KEY，阿里云服务请求地址等进行绑定；
 3.微信商户号，与小程序绑定，申请V3证书；
 4.在百度大脑申请OCR通用识别，新建应用，获得KEY
 
-#相关文档
+# 相关文档
 
 https://uniapp.dcloud.net.cn/uniCloud
 https://ai.baidu.com/ai-doc/OCR/zk3h7xz52
 https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message.html
 
-#其他操作
+# 其他操作
 
 1.uniCloud-aliyun/database 目录下所有DB Schema需要上传到云端；
 2.在uniCloud网页端的dict-ec数据库，需要导入根目录的ecdictv2.csv数据库
@@ -43,7 +43,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscrib
 7.1 奖励到账通知：模板编号6913，字段包括：奖品名称{{thing10.DATA}}、活动主题{{thing1.DATA}}、过期时间{{date4.DATA}}、温馨提示{{thing9.DATA}}；
 7.2 每日佳句通知：模板编号23947，字段包括：更新内容{{thing1.DATA}}、更新时间{{time2.DATA}}
 
-#配置
+# 配置
 
 ## /pages/index/index.vue
 
