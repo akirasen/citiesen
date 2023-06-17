@@ -1,0 +1,24 @@
+{
+  "name": "uni-open-bridge",
+  "dependencies": {
+    "uni-config-center": "file:../../../../uni-config-center/uniCloud/cloudfunctions/common/uni-config-center",
+    "uni-open-bridge-common": "file:../../../../uni-open-bridge-common/uniCloud/cloudfunctions/common/uni-open-bridge-common"
+  },
+  "cloudfunction-config": {
+    "memorySize": 256,
+    "timeout": 60,
+    "triggers": [
+      {
+        "name": "uni-open-bridge",
+        "type": "timer",
+        "config": "0 0 * * * * *"
+      }
+    ],
+    "path": "",
+    "runtime": "Nodejs8"
+  },
+  "extensions": {
+    "uni-cloud-jql": {},
+    "uni-cloud-redis": {}
+  }
+}
